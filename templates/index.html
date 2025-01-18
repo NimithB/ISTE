@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Learning Website</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #A3D9FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+        .login-container h1 {
+            color: #FF6F61;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        .input-field {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .input-field input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #FFD966;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+        }
+        .login-btn {
+            background-color: #FF6F61;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .login-btn:hover {
+            background-color: #D75951;
+        }
+        .footer {
+            margin-top: 15px;
+            color: #707070;
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: #FF6F61;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome!</h1>
+        <p>Login to start learning with us.</p>
+
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
+        <form action="/login" method="POST">
+            <div class="input-field">
+                <input type="text" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="input-field">
+                <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <div class="footer">
+            <p>New here? <a href="#">Sign Up</a></p>
+        </div>
+    </div>
+</body>
+</html>

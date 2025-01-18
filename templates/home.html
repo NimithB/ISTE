@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Learning Hub</title>
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #A3D9FF; /* Pastel blue */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background-color: #FFFFFF; /* White Card */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #FF6F61; /* Soft coral red */
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #707070; /* Neutral gray */
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .menu-item {
+            background-color: #FFD966; /* Pastel Yellow */
+            color: #333;
+            width: 45%;
+            margin: 5px;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .menu-item:hover {
+            background-color: #F4C542; /* Slightly darker yellow */
+        }
+
+        /* Icon Styles */
+        .menu-item img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #707070;
+        }
+
+        .footer a {
+            color: #FF6F61;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome Back!</h1>
+        <p>Select an option to start learning:</p>
+
+        <div class="menu">
+            <a class="menu-item" href="{{ url_for('pdf_to_comic') }}">
+                <img src="https://cdn-icons-png.flaticon.com/512/3097/3097140.png" alt="Comic Icon">
+                PDF to Story
+            </a>
+            
+            <a class="menu-item" href="pdf_to_video.html">
+                <img src="https://img.icons8.com/color/48/000000/video.png" alt="Video">
+                PDF to Video
+            </a>
+            <a class="menu-item" href="pronunciation.html">
+                <img src="https://img.icons8.com/color/48/000000/microphone.png" alt="Pronunciation">
+                Pronunciation
+            </a>
+            <a class="menu-item" href="scoreboard.html">
+                <img src="https://img.icons8.com/color/48/000000/trophy.png" alt="Scoreboard">
+                Scoreboard
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>Need Help? <a href="#">Contact Us</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
