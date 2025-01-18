@@ -1,6 +1,4 @@
-Here's a sample **README.md** specifically tailored for GitHub, which you can use for your repository.
 
----
 
 # ISTE Learning Hub
 
@@ -103,6 +101,3 @@ This project is licensed under the **MIT License**. See the LICENSE file for det
 
 For issues or suggestions, please open an issue in the repository or contact the maintainer via GitHub.
 
----
-
-You can use this template by replacing any parts with specifics to your project if necessary!
